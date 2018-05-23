@@ -11,23 +11,33 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import edu.utm.bd.domain.Cliente;
-import edu.utm.service.cliente.ClienteService;
+import edu.utm.bd.domain.Compra;
+import edu.utm.service.compra.CompraService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"/applicationContext.xml"})
-public class ClienteServiceImplTest {
+public class CompraServiceImplTest {
 	@Inject
-	ClienteService clienteService;
-	
+	CompraService compraService;
 	@Test
 	public void pruebaConsultarTodo() {
 		try {
-			List<Cliente> lista = clienteService.findAllClientes();
-			System.out.println("numero de clientes: "+lista.size());
-
-			assertEquals(lista.size(),2);
+			List<Compra> lista = compraService.findAllCompras();
+			assertEquals(lista.size(),4);
 		}catch(Exception ex) {
+			System.out.println("error "+ex);
+		}
+	}
+	@Test
+	public void pruebaBusca1Compra() {
+		try {
+			Compra c = new Compra();
+			Compra result=null;
+			c.setIdcompra("1");
+			result=compraService.findOneCompra(c);
+			System.out.println("Compra encontrada: "+result.getComtotal());
+		}
+		catch(Exception ex) {
 			System.out.println("error "+ex);
 		}
 	}
