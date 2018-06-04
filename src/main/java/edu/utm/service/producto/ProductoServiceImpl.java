@@ -23,5 +23,13 @@ public class ProductoServiceImpl implements ProductoService{
 		return productoDao.findOneProducto(producto);
 	}
 	
-	
+	public void insertProducto(Producto producto){
+		productoDao.insertProducto(producto);
+	}
+	public void updateProducto(Producto producto){
+		productoDao.updateProducto(producto);
+	}
+	public void deleteProducto(Producto producto){
+		productoDao.deleteProducto(producto);
+	}
 }

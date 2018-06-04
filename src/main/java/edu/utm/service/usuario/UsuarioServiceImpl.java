@@ -20,7 +20,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 
 	@Override
 	public void updateUsuario(Usuario usuario) {
-		
+		usuarioDao.updateUsuario(usuario);
 	}
 
 	@Override
@@ -30,12 +30,12 @@ public class UsuarioServiceImpl implements UsuarioService {
 
 	@Override
 	public void insertUsuario(Usuario usuario) {
-		
+		usuarioDao.insertUsuario(usuario);
 	}
 
 	@Override
 	public void deleteOneUsuario(Usuario usuario) {
-		
+		usuarioDao.deleteOneUsuario(usuario);
 	}
 	
 }

@@ -21,7 +21,14 @@ public class ClienteServiceImpl implements ClienteService{
 
 	@Override
 	public void updateCliente(Cliente cliente) {
-		
+		clienteDao.updateCliente(cliente);
 	}
 	
+	public void insertCliente(Cliente cliente){
+		clienteDao.insertCliente(cliente);
+	}
+
+	public void deleteOneCliente(Cliente cliente){
+		clienteDao.deleteOneCliente(cliente);
+	}
 }

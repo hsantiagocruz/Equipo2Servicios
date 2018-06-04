@@ -25,7 +25,7 @@ public class VentaServiceImpl implements VentaService{
 
 	@Override
 	public void insertVenta(Venta venta) {
-		
+		ventaDao.insertVenta(venta);
 	}
 
 }

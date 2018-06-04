@@ -22,5 +22,19 @@ public class ProveedorServiceImpl implements ProveedorService{
 	public Proveedor findOneProveedor(Proveedor proveedor) {
 		return proveedorDao.findOneProveedor(proveedor);
 	}
-
+	
+	@Override
+	public void insertProveedor(Proveedor proveedor){
+		proveedorDao.insertProveedor(proveedor);
+	}
+	
+	@Override
+	public void deleteOneProveedor(Proveedor proveedor){
+		proveedorDao.deleteOneProveedor(proveedor);
+	}
+	
+	@Override
+	public void updateProveedor(Proveedor proveedor){
+		proveedorDao.updateProveedor(proveedor);
+	}
 }
